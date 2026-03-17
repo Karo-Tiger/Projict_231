@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gai</title>
+</head>
+<body>
+<div th:each ="car : ${cars}">
+    <a th:href="@{/gai/car(id=${car.id})}" th:text="${car.model}">user</a>
+</div>
+<br/>
+<hr/>
+<a  th:href="@{/gai/new}">Create new car</a>
+</body>
+</html>

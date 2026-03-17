@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit car</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/gai/update(id=${car.getId()})}" th:object="${car}" >
+    <label for="Model">Model:</label>
+    <input type="text" th:field="*{model}" id="model"/>
+    <br/>
+    <label for="Color">Color:</label>
+    <input type="text" th:field="*{color}" id="color"/>
+    <br/>
+    <label for="Year">Year:</label>
+    <input type="text" th:field="*{year}" id="year"/>
+    <br/>
+    <label for="Price">Price:</label>
+    <input type="text" th:field="*{price}" id="price"/>
+    <br/>
+    <input type="submit" value="Updata!"/>
+</form>
+</body>
+</html>
