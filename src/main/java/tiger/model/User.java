@@ -3,8 +3,8 @@ package tiger.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "car")
-public class Car {
+@Table(name="car")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -16,9 +16,9 @@ public class Car {
     private int year;
     @Column(length = 20)
     private double price;
-    public Car() {
+    public User() {
     }
-    public Car(String model, String color, int year, double price) {
+    public User(String model, String color, int year, double price) {
         this.model = model;
         this.color = color;
         this.year = year;

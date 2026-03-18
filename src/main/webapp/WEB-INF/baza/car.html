@@ -5,7 +5,7 @@
     <title>Gai</title>
 </head>
 <body>
-<div th:each ="car : ${cars}">
+<div th:each ="car : ${users}">
     <a th:href="@{/gai/car(id=${car.id})}" th:text="${car.model}">user</a>
 </div>
 <br/>

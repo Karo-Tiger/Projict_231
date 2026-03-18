@@ -5,17 +5,17 @@
     <title>Gai</title>
 </head>
 <body>
-<p th:text="${car.model}">VALUE</p>
-<p th:text="${car.color}">VALUE</p>
-<p th:text="${car.year}">VALUE</p>
-<p th:text="${car.price}">VALUE</p>
+<p th:text="${users.model}">VALUE</p>
+<p th:text="${users.color}">VALUE</p>
+<p th:text="${users.year}">VALUE</p>
+<p th:text="${users.price}">VALUE</p>
 
 
-<a th:href="@{/gai/edit(id=${car.id})}">Edit</a>
+<a th:href="@{/gai/edit(id=${users.id})}">Edit</a>
 
 
 <form th:method="POST" th:action="@{/gai/delete}">
-    <input type="hidden" name="id" th:value="${car.id}" />
+    <input type="hidden" name="id" th:value="${users.id}" />
     <input type="submit" value="Delete"/>
 </form>
 </body>
