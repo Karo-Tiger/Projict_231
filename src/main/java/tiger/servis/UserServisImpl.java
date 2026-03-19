@@ -4,8 +4,9 @@ import org.springframework.stereotype.Service;
 import tiger.dao.UserDao;
 import tiger.model.User;
 
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
+@Transactional(readOnly=true)
 @Service
 public class UserServisImpl implements UserServise {
 
